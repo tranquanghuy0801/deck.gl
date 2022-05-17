@@ -91,6 +91,9 @@ export default {
       'public.derived_spatialfeatures_ukr_quadgrid18_v1_yearly_v2',
       'public.derived_spatialfeatures_usa_quadgrid15_v1_yearly_v2',
     ],
-    h3: []
+    h3: [
+      'derived_spatialfeatures_esp_h3res8_v1_yearly_v2',
+      'derived_spatialfeatures_usa_h3res8_v1_yearly_v2',
+    ]
   }
 }
