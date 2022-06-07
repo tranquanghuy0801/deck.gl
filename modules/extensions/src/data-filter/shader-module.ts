@@ -63,7 +63,8 @@ uniform bool filter_transformColor;
 varying float dataFilter_value;
 `;
 
-const getUniforms = opts => {
+/** eslint-disable camelcase */
+const getUniforms = (opts: any) => {
   if (!opts || !opts.extensions) {
     return {};
   }
@@ -75,7 +76,7 @@ const getUniforms = opts => {
   } = opts;
   const filterSoftRange = opts.filterSoftRange || filterRange;
 
-  const uniforms = Number.isFinite(filterRange[0])
+  const uniforms: any = Number.isFinite(filterRange[0])
     ? {
         filter_min: filterRange[0],
         filter_softMin: filterSoftRange[0],
@@ -96,7 +97,7 @@ const getUniforms = opts => {
   return uniforms;
 };
 
-const getUniforms64 = opts => {
+const getUniforms64 = (opts: any) => {
   if (!opts || !opts.extensions) {
     return {};
   }

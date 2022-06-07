@@ -69,7 +69,8 @@ const inject = {
   `
 };
 
-function getPatternUniforms(opts = {}, uniforms) {
+/** eslint-disable camelcase */
+function getPatternUniforms(opts: any = {}, uniforms: any) {
   if ('fillPatternTexture' in opts) {
     const {fillPatternTexture} = opts;
     return {

@@ -18,6 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+/** eslint-disable camelcase */
 import {fp64} from '@luma.gl/shadertools';
 const {fp64ify, fp64ifyMatrix4} = fp64;
 import {project, _memoize as memoize} from '@deck.gl/core';
@@ -37,7 +38,7 @@ export default {
 const DEFAULT_MODULE_OPTIONS = {};
 const getMemoizedUniforms = memoize(calculateUniforms);
 
-function getUniforms(opts = DEFAULT_MODULE_OPTIONS) {
+function getUniforms(opts: any = DEFAULT_MODULE_OPTIONS) {
   if (opts.viewport) {
     const {viewProjectionMatrix, scale} = opts.viewport;
     // We only need to update fp64 uniforms if fp32 projection is being updated
